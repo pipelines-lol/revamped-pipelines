@@ -5,7 +5,7 @@ import "~/styles/globals.css";
 
 import { headers } from "next/headers";
 
-import { TRPCReactProvider } from "./providers";
+import { TRPCReactProvider } from "./_components/providers";
 
 const fontSans = Inter({
   subsets: ["latin"],
