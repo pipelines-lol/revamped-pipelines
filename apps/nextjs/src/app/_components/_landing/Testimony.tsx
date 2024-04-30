@@ -26,7 +26,7 @@ export default function Testimonies() {
               willChange: "transform",
               translateY: 20,
             }}
-            className="xs:text-xl text-pipelines-gray-100/80 mx-8 -mt-2 mt-3 text-center text-xl font-normal sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl"
+            className="xs:text-xl text-pipelines-gray-100/80 mx-8 mt-3 text-center text-xl font-normal sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl"
           >
             Spoiler Alert: They
             <span className="text-pipeline-blue-200 font-semibold">
