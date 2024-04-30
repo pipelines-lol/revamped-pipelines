@@ -81,9 +81,10 @@ const About: React.FC = () => {
 
         <div className="relative left-[15%] flex h-full w-full items-center justify-center sm:left-[-5%]">
           <Image
-            fill={true}
+            width={64}
+            height={64}
             className="h-[25vh] w-full object-contain sm:h-[35vh]"
-            src={"/Hero.svg"}
+            src="Hero.svg"
             alt={"Hero"}
           />
         </div>
