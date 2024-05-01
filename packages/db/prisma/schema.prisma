@@ -17,7 +17,7 @@ model User {
 }
 
 model Profile {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  id        String       @id @default(auto()) @map("_id") @db.ObjectId
   firstName String?
   lastName  String?
   userName  String?
@@ -26,18 +26,18 @@ model Profile {
   position  String?
   location  String?
   anonymous Boolean?
-  school    String?   @db.ObjectId
+  school    String?      @db.ObjectId
   created   Boolean?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  pipeline Experience[]
-  offers   Offer[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  pipeline  Experience[]
+  offers    Offer[]
 }
 
 model Experience {
-  profile      Profile  @relation(fields: [id], references: [id])
-  id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  companyId    String   @db.ObjectId
+  profile      Profile   @relation(fields: [id], references: [id])
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  companyId    String    @db.ObjectId
   companyName  String
   displayName  String
   title        String
@@ -49,9 +49,9 @@ model Experience {
 }
 
 model Offer {
-  profile      Profile  @relation(fields: [id], references: [id])
-  id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  companyId    String   @db.ObjectId
+  profile      Profile   @relation(fields: [id], references: [id])
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  companyId    String    @db.ObjectId
   companyName  String
   displayName  String
   startDate    DateTime
@@ -61,33 +61,35 @@ model Offer {
 
 // Company and school Section
 model Company {
-  id              String   @id @default(auto()) @map("_id") @db.ObjectId
-  name            String
-  logo            String
-  displayName     String
-  description     String
-  rating          Int?
-  tenure          Int?
-  prevCompanies   Json?
-  postCompanies   Json?
-  Employees       String[] @db.ObjectId
-  interns         String[] @db.ObjectId
-  ratedEmployees  String[] @db.ObjectId
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  logo           String
+  displayName    String
+  description    String
+  rating         Int?
+  tenure         Int?
+  prevCompanies  Json?
+  postCompanies  Json?
+  Employees      String[] @db.ObjectId
+  interns        String[] @db.ObjectId
+  ratedEmployees String[] @db.ObjectId
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
 
 model School {
-  id              String  @id @default(auto())  @map("_id") @db.ObjectId
-  name            String
-  domains         String[]
-  state_province  String
-  country         String
-  alpha_two_code  String
-  webpages        String[]
-  schoolTally     Json?
-  rank            Int
-  logo            String
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  domains        String[]
+  state_province String
+  country        String
+  alpha_two_code String
+  webpages       String[]
+  schoolTally    Json?
+  rank           Int
+  logo           String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
 
 // Dashboard Section
